@@ -8,7 +8,7 @@ public class Stack {
         arr = new int[a];
     }
     public void push (int a) {
-        if (top == arr.length-1) {
+        if (top == arr.length) {
             System.out.println("Sorry, this stack is full. Please pop before trying again. ");
         }
         else {
@@ -23,8 +23,8 @@ public class Stack {
             return null;
         }
         else {
-            int poppedNumber = arr[top];
-            arr[top] = 0;
+            int poppedNumber = arr[top-1];
+            arr[top-1] = 0;
             top--;
             return poppedNumber;
         }
@@ -35,7 +35,7 @@ public class Stack {
                     "Please add something first. ");
             return null;
         }
-        return arr[top];
+        return arr[top-1];
     }
     public void printStack () {
         for (int i = 0; i < top; i++) {
