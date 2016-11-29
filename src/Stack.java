@@ -16,14 +16,26 @@ public class Stack {
             top++;
         }
     }
-    public int pop () {
-        int poppedNumber = arr[top];
-        arr[top] = 0;
-        top--;
-        return poppedNumber;
+    public Integer pop () {
+        if (top == 0) {
+            System.out.println("Sorry, there are no values to be removed. " +
+                    "Please add something first. ");
+            return null;
+        }
+        else {
+            int poppedNumber = arr[top];
+            arr[top] = 0;
+            top--;
+            return poppedNumber;
+        }
     }
-    public int peek () {
-     return arr[top];
+    public Integer peek () {
+        if (top == 0) {
+            System.out.println("Sorry, you can't look at any values because there aren't any. " +
+                    "Please add something first. ");
+            return null;
+        }
+        return arr[top];
     }
     public void printStack () {
         for (int i = 0; i < top; i++) {
