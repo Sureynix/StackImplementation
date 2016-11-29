@@ -12,8 +12,8 @@ public class Stack {
             System.out.println("Sorry, this stack is full. Please pop before trying again. ");
         }
         else {
-            top++;
             arr[top] = a;
+            top++;
         }
     }
     public int pop () {
