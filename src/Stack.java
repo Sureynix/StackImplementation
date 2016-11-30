@@ -38,8 +38,13 @@ public class Stack {
         return arr[top-1];
     }
     public void printStack () {
-        for (int i = 0; i < top; i++) {
-            System.out.println(i + ": " + arr[i]);
+        if (top == 0) {
+            System.out.println("Nothing to print, please add values first.");
+        }
+        else {
+            for (int i = 0; i < top; i++) {
+                System.out.println(i + ": " + arr[i]);
+            }
         }
     }
 
